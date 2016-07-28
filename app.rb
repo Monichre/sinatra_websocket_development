@@ -23,14 +23,14 @@ end
 
 get('/') do
   # @users = User.all()
-  erb :index
+  erb :"index.html"
 end
 
 get '/user' do
   if User.find_by_id(session[:id])
     @user = User.find(session[:id])
     @users = User.all()
-    erb(:user)
+    erb :"user.html"
   else
     flash[:notice] = "You have been signed out due to inactivity"
     redirect '/'
