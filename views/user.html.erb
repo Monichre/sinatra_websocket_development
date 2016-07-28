@@ -18,67 +18,63 @@
   <div class="chat_div">
     <% if @users.any? %>
       <ul class="chats">
-        <% @users.each do |user| %>
-          <%if user != @user %>
-            <li class="chat"> <img src="../assets/images/chat.png" alt="" />
-
-            </li>
+        <%if user != @user %>
+          <% @users.each do |user| %>
+              <li class="chat"> <img src="../assets/images/chat.png" alt="" />
+                <%=user.username%>
+              </li>
           <% end %>
         <% end %>
       </ul>
-    <% end %>
+    <% end %><!-- end of if any users? -->
   </div>
 </div>
 
 <div class="chat-wrapper">
-
-
-      <section class="module">
-        <header class="top-bar">
-          <div class="left">
-            <span class="icon typicons-message"></span>
-            <h1>Something</h1>
-          </div>
-          <div class="right">
-            <a class="minus" href="#"><span class="icon typicons-minus"></span></a>
-            <a class="plus" href="#"><span class="icon typicons-plus"></span></a>
-            <form class="exit_form">
-              <input type="hidden" name="conversation_id">
-              <input type="hidden" name="_method" value="delete">
-              <button class="exit" type="submit" name="button"><span class="icon typicons-times"></span></button>
-            </form>
-          </div>
-        </header>
-        <div class="discussion_with_input">
-          <ol class="discussion">
-
-            <li class="self">
-              <div class="avatar">
-                <img src="./profile.png" alt="profile avater"/>
-              </div>
-              <div class="messages">
-                <div id="chat-text"><!-- heroku chat output div -->
-                </div>
-              </div>
-            </li>
-            <li class="other">
-              <div class="avatar">
-                <img src="./profile2.png" alt="profile avater"/>
-              </div>
-              <div class="messages">
-                <p>that mongodb thing looks good, huh?</p>
-                <p>tiny master db, and huge document store</p>
-              </div>
-            </li>
-          </ol>
-          <div class="message-input">
-            <form id="input-form">
-              <input id="input-handle" type="hidden" class="form-control" value = "<%= @user.username %>" autofocus /><!--heroku version -->
-              <input id="input-text" type="text" class="form-control" placeholder="Enter chat text here!" autofocus /><!--heroku version -->
-              <button class="users" type="submit" name="button">send</button>
-            </form>
-          </div>
+    <section class="module">
+      <header class="top-bar">
+        <div class="left">
+          <span class="icon typicons-message"></span>
+          <h1>Something</h1>
         </div>
-      </section>
-
+        <div class="right">
+          <a class="minus" href="#"><span class="icon typicons-minus"></span></a>
+          <a class="plus" href="#"><span class="icon typicons-plus"></span></a>
+          <form class="exit_form">
+            <input type="hidden" name="conversation_id">
+            <input type="hidden" name="_method" value="delete">
+            <button class="exit" type="submit" name="button"><span class="icon typicons-times"></span></button>
+          </form>
+        </div>
+      </header>
+      <div class="discussion_with_input">
+        <ol class="discussion">
+          <li class="self">
+            <div class="avatar">
+              <img src="./profile.png" alt="profile avater"/>
+            </div>
+            <div class="messages">
+              <div id="chat-text"><!-- heroku chat output div -->
+              </div>
+            </div>
+          </li>
+          <li class="other">
+            <div class="avatar">
+              <img src="./profile2.png" alt="profile avater"/>
+            </div>
+            <div class="messages">
+              <p>that mongodb thing looks good, huh?</p>
+              <p>tiny master db, and huge document store</p>
+            </div>
+          </li>
+        </ol>
+        <div class="message-input">
+          <form id="input-form">
+            <input id="input-handle" type="hidden" class="form-control" value = "<%= @user.username %>" autofocus /><!--heroku version -->
+            <input id="input-text" type="text" class="form-control" placeholder="Enter chat text here!" autofocus /><!--heroku version -->
+            <button class="users" type="submit" name="button">send</button>
+          </form>
+        </div>
+      </div>
+    </section>
 </div>
