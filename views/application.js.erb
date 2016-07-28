@@ -3,6 +3,7 @@ var uri      = scheme + window.document.location.host + "/";
 var ws       = new WebSocket(uri);
 ws.onmessage = function(message) {
   var data = JSON.parse(message.data);
+  console.log("application-js-erb: " + data);
   $("#chat-text").append("<li class='self'><div class='avatar'><img src='/assets/images/profile.png' alt='profile avatar'/></div><div class='messages'><p>" + data.handle + ":" + data.text + "</p></div></li>");
   $("#chat-text").stop().animate({
     scrollTop: $('#chat-text')[0].scrollHeight
