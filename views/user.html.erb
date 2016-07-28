@@ -18,8 +18,8 @@
   <div class="chat_div">
     <% if @users.any? %>
       <ul class="chats">
-        <%if user != @user %>
-          <% @users.each do |user| %>
+        <% @users.each do |user| %>
+          <%if user != @user %>
               <li class="chat"> <img src="../assets/images/chat.png" alt="" />
                 <%=user.username%>
               </li>
