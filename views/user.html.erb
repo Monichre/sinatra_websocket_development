@@ -14,24 +14,6 @@
   </div>
 </div>
 
-<div class="dashboard">
-  <h2><span class="profile"><img src="../assets/images/profile.png" alt="" /></span><%=@user.username %><span id="chats_arrow_up" class="chats_icon glyphicon glyphicon-chevron-up"></span><span id="chats_arrow_down" class="chats_icon glyphicon glyphicon-chevron-down"></span></h2>
-  <div class="chat_div">
-    <% if @users.any? %>
-      <ul class="chats">
-        <% @users.each do |user| %>
-          <%if user != @user %>
-              <li class="chat"> <img src="../assets/images/chat.png" alt="" />
-                <%=user.username%>
-              </li>
-          <% end %>
-        <% end %>
-      </ul>
-    <% end %><!-- end of if any users? -->
-  </div>
-</div>
-
-
 <div class="row">
   <div class="col-sm-3">
     <div class="dashboard">
