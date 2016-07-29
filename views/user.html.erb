@@ -3,18 +3,15 @@
     <li id="dashboard">Dashboard...</li>
     <li id="user_home">
       <form class="" action="/logout/?" method="post">
-        <button id="signout" type="submit" name="button">SIGN OUT<span class="glyphicon glyphicon-home"></button>
+        <button id="signout" class="mobile" type="submit" name="button">SIGN OUT<span class="glyphicon glyphicon-home"></button>
       </form>
     </li>
   </nav>
 </header>
-
 <div class="index_background">
   <div class="layer">
   </div>
 </div>
-
-
 <div class="dashboard">
   <h2><span class="profile"><img src="assets/images/profile.png" alt="" /></span><%=@user.username %><span id="chats_arrow_up" class="chats_icon glyphicon glyphicon-chevron-up"></span><span id="chats_arrow_down" class="chats_icon glyphicon glyphicon-chevron-down"></span></h2>
   <div class="chat_div">

@@ -228,10 +228,6 @@ main {
   display: inline;
   font-size: 1.1rem;
 }
-.middle {
-  margin: auto;
-  text-align: center;
-}
 .top-bar .typicons-message {
   display: inline-block;
   padding: 4px 5px 2px 5px;
@@ -425,4 +421,22 @@ textarea {
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 600px){ /* MEDIA QUERY FOR Mobile  */
+  .mobile {
+    display: none;
+  }
+  #dashboard {
+    margin-top: 50px!important;
+  }
+  .dashboard h2 {
+    font-size: 40px;
+  }
+  .chat {
+    margin-left: 0;
+  }
+  .model {
+    height: 300px;
+  }
 }
