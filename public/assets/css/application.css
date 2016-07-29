@@ -132,19 +132,22 @@ main {
   position: absolute;
   text-align: center;
   width: 100%;
-  padding: 2%;
+  padding: 0;
   left: 0;
-  bottom: 50px;
+  bottom: 30px;
   color: white;
   font-family: future;
   display: none;
 }
+
 .signin {
-  bottom: 10px;
+  bottom: 0;
 }
+
 #log, #sign {
   display: block;
 }
+
 #log input, #sign input {
   background-color: transparent;
   border: gray;
@@ -303,9 +306,10 @@ textarea {
   background: rgba(229,229,229, .5);
 }
 .discussion li {
+  margin-left: 10px!important;
   padding: 0.5rem;
   overflow: hidden;
-  display: flex;
+  /*display: flex;*/
 }
 .discussion .avatar {
   width: 10%;
@@ -349,25 +353,46 @@ textarea {
   border-top-color: transparent;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-.messages {
+/*****************************************************/
+ /*text bubble stylings*/
+.message {
   width: 90%;
   color: black;
-  text-align: left;;
+  text-align: left;
   background: white;
+  margin-left: 10px;
   padding: 10px;
   border-radius: 2px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.messages p {
-  font-size: 0.8rem;
-  margin: 0 0 0.2rem 0;
-  line-height: 2em;
-  letter-spacing: .1em;
+.bubble {
+  background-image: -webkit-linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+  background-image:    -moz-linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+  background-image:     -ms-linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+  background-image:      -o-linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+  background-image:         linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+  position: relative;
 }
+.bubble:before {
+    border-right: 25px solid hsla(0,0%,0%,.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    bottom: -28px;
+    right: 22px;
+}
+.bubble:after {
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid white;
+    bottom: -5px;
+    content: '';
+    position:absolute;
+    left: 0;
+    box-shadow: 1px 0px 0px rgba(0, 0, 0, 0);
+}
+/*
 .messages time {
   font-size: 0.7rem;
   color: #ccc;
-}
+}*/
 @keyframes pulse {
   from {
     opacity: 0;
