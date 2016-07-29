@@ -172,6 +172,9 @@ main {
   font-size: 25px;
   color: white;
 }
+.glyphicon-home {
+  margin-left: 10px;
+}
 .dashboard {
   margin-top: 5%;
   width: max-content;
@@ -195,19 +198,21 @@ main {
 /*****************************************************/
 /*conversations*/
 
-/*.chat-wrapper {
+.chat-wrapper {
   bottom: 0;
   left: 0;
   position: absolute;
   display: flex;
   width: 100%;
-
-}*/
+}
 .module {
-  width: 750px;
+  display: block;
+  margin: auto;
+  width: 500px;
   margin-top: 30px;
   height: 60%;
   align-self: flex-end;
+  box-shadow: 0px 1px 1px   white;
 }
 .top-bar {
   background: #666;
@@ -237,7 +242,7 @@ a.plus {
 }
 .text_input {
   align-self: flex-end;
-  width: 650px;
+  width: 80%;
   box-shadow: inset 0px 0px 10px 0px #ABABAB;
     -webkit-box-shadow: inset 0px 0px 10px 0px #ABABAB;
     -moz-box-shadow: inset 0px 0px 10px 0px #ABABAB;
@@ -252,7 +257,7 @@ a.plus {
 .send {
   font-family: future;
   display: inline;
-  width:100px;
+  width:20%;
   height: 53px;
   background-color: white;
 }
@@ -282,12 +287,14 @@ textarea {
 }
 .discussion {
   list-style: none;
-  background: rgba(229,229,229, .5);
   margin: 0;
   padding: 0 0 50px 0;
-  height: 700px;
+  height: max-content;
 }
-
+.pre-scrollable {
+  height: 700px;
+  background: rgba(229,229,229, .5);
+}
 .discussion li {
   padding: 0.5rem;
   overflow: hidden;
