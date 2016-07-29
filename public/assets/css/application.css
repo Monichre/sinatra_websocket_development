@@ -160,6 +160,9 @@ main {
   font: inherit;
   cursor: pointer;
 }
+#signout:hover {
+  text-shadow: 1px 1px 1px white;
+}
 .user_button {
   margin: 2%;
   border: none;
@@ -225,6 +228,10 @@ main {
   display: inline;
   font-size: 1.1rem;
 }
+.middle {
+  margin: auto;
+  text-align: center;
+}
 .top-bar .typicons-message {
   display: inline-block;
   padding: 4px 5px 2px 5px;
@@ -259,7 +266,11 @@ a.plus {
   display: inline;
   width:20%;
   height: 53px;
-  background-color: white;
+  background: radial-gradient(#ffffff, #000000);
+  /*animation: pulse 1s ease alternate infinite;*/
+  opacity: 0.8;
+  border-radius: 5px;
+
 }
 textarea {
   resize: none;
