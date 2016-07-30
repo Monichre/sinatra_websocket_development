@@ -1,7 +1,7 @@
 {
   "name": "Epichat",
   "description": "A template for getting started with the WebSockets on Heroku using Ruby.",
-  "website": "https://git.heroku.com/agile-castle-57350",
+  "website": "https://git.heroku.com/warm-shore-91661.git",
   "success_url": "/",
   "addons": ["rediscloud"],
   "env": {},
